@@ -177,9 +177,10 @@ class Query(object):
                                           self._format_from(),
                                           self._format_where(),
                                           self._format_group_by(),
+                                          self._format_order(),
                                           self._format_limit(),
-                                          self._format_into(),
-                                          self._format_order())
+                                          self._format_into()
+                                          )
         return self._format_query(query)
 
     def _format(self):

@@ -9,7 +9,7 @@
 __version__ = '0.0.1'
 
 from .query import Query
-
+from .functions import Mean
 
 class Engine(object):
     def __init__(self, client):
