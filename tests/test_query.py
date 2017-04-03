@@ -442,7 +442,7 @@ def test_format_select_query():
     fmt = "SELECT COUNT(a), SUM(b), PERCENTILE(d, 99) FROM x "
     fmt += "WHERE e = false AND f != true AND g < 4 AND h > 5 "
     fmt += "GROUP BY time(1h), a, b fill(0) "
-    fmt += "LIMIT 100 ORDER BY time ASC;"
+    fmt += "ORDER BY time ASC LIMIT 100;"
 
     q = Query(Count('a'), Sum('b'), Percentile('d', 99)) \
         .from_('x') \
